@@ -13,8 +13,8 @@ public class BankAccount {
   public double getbalance(){
     return balance;
   }
-  public String setpassword(){
-    return password;
+  public void setpassword(String newPass){
+    password = newPass;
   }
   public String toString(){
     return accountID + "\t" + balance;
