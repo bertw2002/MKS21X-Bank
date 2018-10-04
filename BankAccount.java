@@ -3,9 +3,9 @@ public class BankAccount {
   public int accountID;
   public String password;
   public BankAccount(int x, String s,double b){
-    b = balance;
-    x = accountID;
-    s = password;
+    balance = b;
+    accountID = x;
+    password = s;
   }
   public int getaccountID(){
     return accountID;
@@ -26,7 +26,7 @@ public class BankAccount {
     }
     return false;
   }
-  public boolean decreasebal(double amount){
+  public boolean withdraw(double amount){
     if (amount < balance){
       balance -= amount;
       return true;
