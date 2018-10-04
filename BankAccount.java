@@ -19,16 +19,16 @@ public class BankAccount {
   public String toString(){
     return accountID + "\t" + balance;
   }
-  public boolean increasebal(int depo){
-    if (depo >= 0){
-      balance += depo;
+  public boolean deposit(double amount){
+    if (amount >= 0){
+      balance += amount;
       return true;
     }
     return false;
   }
-  public boolean decreasebal(int withdraw){
-    if (withdraw < balance){
-      balance -= withdraw;
+  public boolean decreasebal(double amount){
+    if (amount < balance){
+      balance -= amount;
       return true;
     }
     return false;
