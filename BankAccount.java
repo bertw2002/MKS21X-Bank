@@ -2,7 +2,7 @@ public class BankAccount {
   public double balance;
   public int accountID;
   public String password;
-  public BankAccount(int x, String s,double b){
+  public BankAccount(double b,int x, String s){
     balance = b;
     accountID = x;
     password = s;
@@ -32,5 +32,14 @@ public class BankAccount {
       return true;
     }
     return false;
+  }
+
+
+
+  private boolean authenticate(String password){
+    return this.password.equals(password);
+  }
+  public boolean transferTo(BankAccount other, double amount, String password){
+    return (other.authenticate(password) && this.withdraw(amount)) && other.deposit(amount);
   }
 }
