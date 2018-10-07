@@ -1,7 +1,7 @@
 public class BankAccount {
-  public double balance;
-  public int accountID;
-  public String password;
+  private double balance;
+  private int accountID;
+  private String password;
   public BankAccount(double b,int x, String s){
     balance = b;
     accountID = x;
